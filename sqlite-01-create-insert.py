@@ -30,3 +30,22 @@
 # update
 # commit
 
+# se aparecer o erro 'sqlite3.DatabaseError: database disk image is malformed'
+# pode apagar o bando e recomeçar 
+# isso aconteceu muito comigo pq o replit caiu muito a conexão enquanto eu estava trabalhando nele
+
+# C -> CREATE
+# R -> READ
+# U -> UPDATE
+# D -> DELETE
+
+'''
+1 - importar o SQLite3
+2 - criar o banco ou conecta o banco
+3 - criar o cursor
+4 - SQL (criar tabela, executar instruções SQL)
+4.1 - execute
+4.2 - para garantir a transação no banco (commit)
+4.3 - fechar o banco
+
+'''
