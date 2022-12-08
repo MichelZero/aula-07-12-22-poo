@@ -31,7 +31,7 @@
 
 # se aparecer o erro 'sqlite3.DatabaseError: database disk image is malformed'
 # pode apagar o bando e recomeçar 
-# isso aconteceu muito comigo pq o replit caiu muito a conexão enquanto eu estava trabalhando nele
+# isso aconteceu muito comigo pq o repl.it caiu muito a conexão enquanto eu estava trabalhando nele
 
 # C -> CREATE
 # R -> READ

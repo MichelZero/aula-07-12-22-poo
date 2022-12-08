@@ -18,3 +18,21 @@ db1 = db.connect("agenda.db")
 # antes devemos criar o primeiro o objeto cursor
 # que vai receber o banco e assim podemos executar os comando SQL (criar tabela, inserir, excluir, etc)
 cursor = db1.cursor()
+
+
+# para visualizar os dados da tabela
+# execute um SELECT para o cursor
+# print o método fetchall() (fetch -> buscar)
+cursor.execute("SELECT * FROM pessoas")
+print(cursor.fetchall()) 
+print(type(cursor.fetchall())) # retorna uma lista 
+
+
+# imprimir em linha
+cursor.execute("SELECT * FROM pessoas")
+tabela = cursor.fetchall()
+for i in tabela:
+  print(i)
+
+db1.close()
+# shift + alt + a cria comentários em múltiplas linhas no repl.it
