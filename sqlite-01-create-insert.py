@@ -4,8 +4,7 @@
 
 # data: 07/12/2022
 #
-# Composição 
-# 
+
 #
 # DQL - Linguagem de Consulta de Dados
 # DQL - (select)
