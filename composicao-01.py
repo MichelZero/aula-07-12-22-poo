@@ -2,10 +2,10 @@
 # autores:
 # michel silva
 
-# data: 30/11/2022
+# data: 07/12/2022
 #
 # Composição 
-# .
+# 
 
 # classe A
 class A: 
