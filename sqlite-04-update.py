@@ -14,25 +14,19 @@ import sqlite3 as db
 # criar o banco ou conecta o banco
 db1 = db.connect("agenda.db")
 
+
 # antes devemos criar o primeiro o objeto cursor.
 # que vai receber o banco e assim podemos executar os comando SQL (criar tabela, inserir, excluir, etc)
 cursor = db1.cursor()
 
-# deletar um registro
+# update em um registro
 try: # tenta executar o código abaixo 
-  # correto 
-  cursor.execute("DELETE from pessoas WHERE idade = 9") 
+  cursor.execute("UPDATE pessoas SET idade = 20 WHERE nome = 'Dani'")
   db1.commit()
   
-  # errado
-  cursor.execute("DELETE from pessoas WHERE idade2 = 9") 
-  db1.commit()
-  #  gerar o erro 'no such column: idade2' 
-  
-  
-  cursor.execute("SELECT * FROM pessoas") # * -> todos os campos
+  cursor.execute("SELECT * FROM pessoas")
   print(cursor.fetchall()) 
-  db1.close() # fecha o banco
-  print("dados removidos!")
-except Exception as e: # caso ocorra um erro imprima o erro
+  db1.close()
+  
+except Exception as e: # caso ocorra um erro imprima o erro 
   print(str(e))  # imprime o erro gerado
