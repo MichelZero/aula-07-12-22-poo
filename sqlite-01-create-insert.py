@@ -49,6 +49,8 @@
 
 '''
 
+# criando o bande de exemplo d aula
+
 # importar o Sqlite3
 import sqlite3 as db
 
