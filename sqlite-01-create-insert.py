@@ -49,3 +49,42 @@
 4.3 - fechar o banco
 
 '''
+
+# importar o Sqlite3
+import sqlite3 as db
+
+# criar o banco ou conecta o banco
+db1 = db.connect("agenda.db")
+
+# criando as entidades (tabelas)
+# antes devemos criar o primeiro o objeto cursor
+# que vai receber o banco e assim podemos executar os comando SQL (criar tabela, inserir, excluir, etc)
+cursor = db1.cursor()
+
+# criando tabelas (se a tabela existir vai dar error)
+# a linha #1 abaixo, se rodar o pela segunda vez da erro.
+# 1
+cursor.execute("CREATE TABLE pessoas (nome text, idade integer, email text)")
+
+# pelo SQL podemos evitar o erro acima (rodando pela segunda vez), usando a linha #2
+# se a tabela já existir no banco usar o IF NOT EXISTS
+# 2
+cursor.execute("CREATE TABLE IF NOT EXISTS pessoas (nome text, idade integer, email text)")
+
+# inserindo elementos na tabela pessoas, use aspa simples para não criar erro com a as dupla do parâmetro.
+cursor.execute("INSERT INTO pessoas VALUES('Davi', 9, 'davi@gmail.com')")
+cursor.execute("INSERT INTO pessoas VALUES('Dani', 15, 'dani@gmail.com')")
+
+# realizando um commit para conformar a inserção do banco
+# Lembre-se de sempre salvar as alterações no banco de dados
+# usando o método db1.commit(). Caso contrário, as alterações
+# não serão salvas permanentemente.
+db1.commit()
+
+# fechar a conexão
+# Isso irá fechar a conexão com o banco de dados e 
+# liberar os recursos usados pela conexão. 
+# É importante fechar a conexão quando você não 
+# precisar mais dela, para evitar consumir 
+# recursos desnecessariamente.
+db1.close()
