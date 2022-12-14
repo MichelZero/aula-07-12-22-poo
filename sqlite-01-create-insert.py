@@ -29,7 +29,8 @@
 # update
 # commit
 
-# se aparecer o erro 'sqlite3.DatabaseError: database disk image is malformed'
+# se aparecer o erro 'sqlite3.DatabaseError: database disk 
+# image is malformed'
 # pode apagar o bando e recomeçar 
 # isso aconteceu muito comigo pq o repl.it caiu muito a conexão enquanto eu estava trabalhando nele
 
@@ -51,14 +52,14 @@
 
 # criando o bande de exemplo d aula
 
-# importar o Sqlite3
+# 1. importar o Sqlite3
 import sqlite3 as db
 
-# criar o banco ou conecta o banco
+# 2. criar o banco ou conecta o banco
 db1 = db.connect("agenda.db")
 
 # criando as entidades (tabelas)
-# antes devemos criar o primeiro o objeto cursor
+#3.  antes devemos criar o primeiro o objeto cursor
 # que vai receber o banco e assim podemos executar os comando SQL (criar tabela, inserir, excluir, etc)
 cursor = db1.cursor()
 
