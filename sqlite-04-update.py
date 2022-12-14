@@ -8,7 +8,7 @@
 # continuando com o bando de exemplo da aula,
 # vamos fazer um select.
 
-# importar o Sqlite3
+# 1. importar o Sqlite3
 import sqlite3 as db
 
 # criar o banco ou conecta o banco
